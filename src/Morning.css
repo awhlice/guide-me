@@ -1,0 +1,139 @@
+.Home {
+  background-color: #7AC6FF;
+  display: flex;
+  flex-direction: column;
+}
+
+.Home-header {
+  height: calc(130px + 2vmin);
+  width: 645px;
+  max-height: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.Home-logo {
+  float: left;
+  margin-top: 30px;
+  height: calc(68px + 2vmin);
+}
+
+.Home-text {
+  position: absolute;
+  margin-top: 0px;
+  padding-left: 100px;
+  font-size: calc(100px + 2vmin);
+  font-weight: bold;
+  color: white;
+}
+
+.Home-log-out {
+  position: absolute;
+  background-color: #CFCFCF;
+  line-height: 0px;
+  margin-top: 30px;
+  right: 30px;
+  padding: 0em 0.5em 0em 0.5em;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Home-bar {
+  background-color: #CFCFCF;
+  display: flex;
+  flex-direction: column;
+  line-height: 0px;
+  text-align: left;
+  padding: 0em 0.5em 0em 0.5em;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Home-morning {
+  background-color: #F39697;
+  display: flex;
+  flex-direction: column;
+}
+
+.Home-morning-link {
+  text-align: center;
+  text-decoration: none;
+  font-size: calc(100px + 2vmin);
+  font-weight: bold;
+  color: white;
+}
+
+.Home-afternoon {
+  background-color: #F8B658;
+  display: flex;
+  flex-direction: column;
+}
+
+.Home-afternoon-link {
+  text-align: center;
+  text-decoration: none;
+  font-size: calc(100px + 2vmin);
+  font-weight: bold;
+  color: white;
+}
+
+.Home-evening {
+  background-color: #7E4B68;
+  display: flex;
+  flex-direction: column;
+}
+
+.Home-evening-link {
+  text-align: center;
+  text-decoration: none;
+  font-size: calc(100px + 2vmin);
+  font-weight: bold;
+  color: white;
+}
+
+.Home-bedtime {
+  background-color: #292965;
+  display: flex;
+  flex-direction: column;
+}
+
+.Home-bedtime-link {
+  text-align: center;
+  text-decoration: none;
+  font-size: calc(100px + 2vmin);
+  font-weight: bold;
+  color: white;
+}
+
+.Home-as-needed {
+  background-color: #545454;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.Home-as-needed-link {
+  text-align: center;
+  text-decoration: none;
+  font-size: calc(100px + 2vmin);
+  font-weight: bold;
+  color: white;
+}
+
+.Home-print {
+  background-color: #77D353;
+  display: flex;
+  flex-direction: column;
+}
+
+.Home-print-link {
+  text-align: center;
+  text-decoration: none;
+  font-size: calc(100px + 2vmin);
+  font-weight: bold;
+  color: white;
+}
