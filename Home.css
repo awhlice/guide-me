@@ -6,9 +6,7 @@
 
 .Home-header {
   height: calc(130px + 2vmin);
-  width: 645px;
-  max-height: 100%;
-  max-width: 100%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   white-space: nowrap;
