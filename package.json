@@ -4,10 +4,12 @@
   "main": "main.js",
   "private": true,
   "dependencies": {
+    "electron": "^2.0.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8",
-    "electron": "^2.0.8"
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",

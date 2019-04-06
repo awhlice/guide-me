@@ -1,27 +1,26 @@
-.Home {
+.Morning {
   background-color: #7AC6FF;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
-.Home-header {
+.Morning-header {
   height: calc(130px + 2vmin);
-  width: 645px;
-  max-height: 100%;
-  max-width: 100%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.Home-logo {
+.Morning-logo {
   float: left;
   margin-top: 30px;
   height: calc(68px + 2vmin);
 }
 
-.Home-text {
+.Morning-text {
   position: absolute;
   margin-top: 0px;
   padding-left: 100px;
@@ -30,110 +29,140 @@
   color: white;
 }
 
-.Home-log-out {
+.Morning-log-out {
   position: absolute;
   background-color: #CFCFCF;
-  line-height: 0px;
   margin-top: 30px;
   right: 30px;
-  padding: 0em 0.5em 0em 0.5em;
+  padding: 0.3em 0.5em 0.3em 0.5em;
+}
+
+.Morning-log-out-link {
+  text-align: center;
+  text-decoration: none;
   font-size: calc(10px + 2vmin);
+  font-weight: bold;
   color: white;
 }
 
-.Home-bar {
+.Morning-bar {
   background-color: #CFCFCF;
-  display: flex;
-  flex-direction: column;
   line-height: 0px;
-  text-align: left;
   padding: 0em 0.5em 0em 0.5em;
+  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+  color: white;
+}
+
+.Morning-bar-text {
+  float: left;
+}
+
+.Morning-bar-back {
+  float: right;
+}
+
+.Morning-arrow {
+  height: calc(30px + 2vmin);
+}
+
+.Morning-back-link {
+  text-align: center;
+  text-decoration: none;
+  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+  color: white;
+}
+
+.Morning-body {
+  background-color: #F39697;
+  height: 500px;
+  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+  color: white;
+  text-align: center
+}
+
+.Morning-edit-bar {
+  width: 80%;
+}
+
+.Morning-prescription {
+  padding: 0.5em 0em 0.5em 0em;
+  float: left; 
+  width: 33.333%;
+}
+
+.Morning-prescription-edit {
+  background-color: #F39697;
+}
+
+.Morning-dosage {
+  padding: 0.5em 0em 0.5em 0em;
+  display: inline-block; 
+  width: 33.333%;
+}
+
+.Morning-dosage-edit {
+}
+
+.Morning-instruction {
+    padding: 0.5em 0em 0.5em 0em;
+  float: right; 
+  width: 33.333%;
+}
+
+.Morning-instruction-edit {
+}
+
+.Morning-update-add-remove {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 33.333%;
+  grid-auto-rows: 33.333%;
+}
+
+.Morning-update {
+  background-color: #7AC6FF;
+  grid-row: 1;
+}
+
+.Morning-update-text {
+  background: none;
+  border: none;
+  font-weight: bold;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.Home-morning {
-  background-color: #F39697;
-  display: flex;
-  flex-direction: column;
-}
-
-.Home-morning-link {
-  text-align: center;
-  text-decoration: none;
-  font-size: calc(100px + 2vmin);
-  font-weight: bold;
-  color: white;
-}
-
-.Home-afternoon {
-  background-color: #F8B658;
-  display: flex;
-  flex-direction: column;
-}
-
-.Home-afternoon-link {
-  text-align: center;
-  text-decoration: none;
-  font-size: calc(100px + 2vmin);
-  font-weight: bold;
-  color: white;
-}
-
-.Home-evening {
-  background-color: #7E4B68;
-  display: flex;
-  flex-direction: column;
-}
-
-.Home-evening-link {
-  text-align: center;
-  text-decoration: none;
-  font-size: calc(100px + 2vmin);
-  font-weight: bold;
-  color: white;
-}
-
-.Home-bedtime {
-  background-color: #292965;
-  display: flex;
-  flex-direction: column;
-}
-
-.Home-bedtime-link {
-  text-align: center;
-  text-decoration: none;
-  font-size: calc(100px + 2vmin);
-  font-weight: bold;
-  color: white;
-}
-
-.Home-as-needed {
-  background-color: #545454;
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.Home-as-needed-link {
-  text-align: center;
-  text-decoration: none;
-  font-size: calc(100px + 2vmin);
-  font-weight: bold;
-  color: white;
-}
-
-.Home-print {
+.Morning-add {
   background-color: #77D353;
-  display: flex;
-  flex-direction: column;
+  grid-row: 2;
 }
 
-.Home-print-link {
-  text-align: center;
-  text-decoration: none;
-  font-size: calc(100px + 2vmin);
+.Morning-add-text {
+  background: none;
+  border: none;
   font-weight: bold;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Morning-remove {
+  background-color: #ED4F51;
+  grid-row: 3;
+}
+
+.Morning-remove-text {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: calc(10px + 2vmin);
   color: white;
 }

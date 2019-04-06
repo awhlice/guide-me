@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { NavLink } from "react-router-dom";
 import logo from './logo.svg';
+import Morning from './Morning';
 import './Home.css';
 
 class Home extends Component {
@@ -11,70 +13,28 @@ class Home extends Component {
           <p className= "Home-text">GUIDE ME</p>
         </div>
         <div className= "Home-log-out">
-          <p>Log Out</p>
+          <a className="Home-log-out-link"><NavLink to="/morning">Log Out</NavLink></a>
         </div>
         <body className="Home-bar">
         <p>Patient Name | Prescriptions</p>
         </body>
           <body className = "Home-morning">
-          <a
-            className="Home-morning-link"
-            href="https://reactjs.org"
-            target="_self"
-            rel="noopener noreferrer"
-          >
-            MORNING
-          </a>
+            <a className="Home-morning-link"><NavLink to="/morning">MORNING</NavLink></a>
           </body>
           <body className = "Home-afternoon">
-          <a
-            className="Home-afternoon-link"
-            href="https://reactjs.org"
-            target="_self"
-            rel="noopener noreferrer"
-          >
-            AFTERNOON
-          </a>
+          	<a className="Home-morning-link"><NavLink to="/morning">AFTERNOON</NavLink></a>
           </body>
           <body className = "Home-evening">
-          <a
-            className="Home-evening-link"
-            href="https://reactjs.org"
-            target="_self"
-            rel="noopener noreferrer"
-          >
-            EVENING
-          </a>
+          	<a className="Home-morning-link"><NavLink to="/morning">EVENING</NavLink></a>
           </body>
           <body className = "Home-bedtime">
-          <a
-            className="Home-bedtime-link"
-            href="https://reactjs.org"
-            target="_self"
-            rel="noopener noreferrer"
-          >
-            BEDTIME
-          </a>
+          	<a className="Home-morning-link"><NavLink to="/morning">BEDTIME</NavLink></a>
           </body>
           <body className = "Home-as-needed">
-          <a
-            className="Home-as-needed-link"
-            href="https://reactjs.org"
-            target="_self"
-            rel="noopener noreferrer"
-          >
-            AS NEEDED
-          </a>
+          	<a className="Home-morning-link"><NavLink to="/morning">AS-NEEDED</NavLink></a>
           </body>
           <body className = "Home-print">
-          <a
-            className="Home-print-link"
-            href="https://reactjs.org"
-            target="_self"
-            rel="noopener noreferrer"
-          >
-            PRINT
-          </a>
+          	<a className="Home-morning-link"><NavLink to="/morning">PRINT</NavLink></a>
           </body>
       </div>
     );
