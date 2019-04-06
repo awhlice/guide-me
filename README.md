@@ -1,9 +1,9 @@
 ## Run
 
-npm install
-npm i react-router-dom --save
-npm start
-electron .
+npm install<br>
+npm i react-router-dom --save<br>
+npm start<br>
+electron .<br>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
