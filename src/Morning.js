@@ -36,23 +36,21 @@ class Morning extends Component {
           <div className = "Morning-prescription"> PRESCRIPTION 
             <body className = "Morning-prescription-edit">
              <form action="database.php" method="post">
-               <input className = "Morning-edit-bar" type="text" id="Name" value="Name">
+               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
                </input>
-               <input className = "Morning-edit-bar" type="text" id="Name" value="Name">
+               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
                </input>
-               <input className = "Morning-edit-bar" type="text" id="Name" value="Name">
+               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
                </input>
-               <input className = "Morning-edit-bar" type="text" id="Name" value="Name">
+               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
                </input>
-               <input className = "Morning-edit-bar" type="text" id="Name" value="Name">
+               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
                </input>
-               <input className = "Morning-edit-bar" type="text" id="Name" value="Name">
+               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
                </input>
-               <input className = "Morning-edit-bar" type="text" id="Name" value="Name">
+               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
                </input>
-               <input className = "Morning-edit-bar" type="text" id="Name" value="Name">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="Name" value="Name">
+               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
                </input>
               </form>
             </body>
@@ -60,23 +58,21 @@ class Morning extends Component {
           <div className = "Morning-dosage"> DOSAGE
             <body className = "Morning-dosage-edit">
               <form action="database.php" method="post">
-               <input className = "Morning-edit-bar" type="text" id="Dosage" value="Dosage">
+               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
                </input>
-               <input className = "Morning-edit-bar" type="text" id="Dosage" value="Dosage">
+               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
                </input>
-               <input className = "Morning-edit-bar" type="text" id="Dosage" value="Dosage">
+               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
                </input>
-               <input className = "Morning-edit-bar" type="text" id="Dosage" value="Dosage">
+               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
                </input>
-               <input className = "Morning-edit-bar" type="text" id="Dosage" value="Dosage">
+               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
                </input>
-               <input className = "Morning-edit-bar" type="text" id="Dosage" value="Dosage">
+               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
                </input>
-               <input className = "Morning-edit-bar" type="text" id="Dosage" value="Dosage">
+               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
                </input>
-               <input className = "Morning-edit-bar" type="text" id="Dosage" value="Dosage">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="Dosage" value="Dosage">
+               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
                </input>
               </form>
             </body>
@@ -84,32 +80,56 @@ class Morning extends Component {
           <div className = "Morning-instruction"> INSTRUCTION
             <body className = "Morning-instruction-edit">
               <form action="database.php" method="post">
-               <input className = "Morning-edit-bar" type="text" id="Instruction" value="Instruction">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="Instruction" value="Instruction">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="Instruction" value="Instruction">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="Instruction" value="Instruction">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="Instruction" value="Instruction">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="Instruction" value="Instruction">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="Instruction" value="Instruction">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="Instruction" value="Instruction">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="Instruction" value="Instruction">
-               </input>
+                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
+                  <option value="By mouth">By mouth</option>
+                  <option value="Place under the tongue">Place under the tongue</option>
+                  <option value="Apply topically">Apply topically</option>
+                </select>
+                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
+                  <option value="By mouth">By mouth</option>
+                  <option value="Place under the tongue">Place under the tongue</option>
+                  <option value="Apply topically">Apply topically</option>
+                </select>
+                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
+                  <option value="By mouth">By mouth</option>
+                  <option value="Place under the tongue">Place under the tongue</option>
+                  <option value="Apply topically">Apply topically</option>
+                </select>
+                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
+                  <option value="By mouth">By mouth</option>
+                  <option value="Place under the tongue">Place under the tongue</option>
+                  <option value="Apply topically">Apply topically</option>
+                </select>
+                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
+                  <option value="By mouth">By mouth</option>
+                  <option value="Place under the tongue">Place under the tongue</option>
+                  <option value="Apply topically">Apply topically</option>
+                </select>
+                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
+                  <option value="By mouth">By mouth</option>
+                  <option value="Place under the tongue">Place under the tongue</option>
+                  <option value="Apply topically">Apply topically</option>
+                </select>
+                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
+                  <option value="By mouth">By mouth</option>
+                  <option value="Place under the tongue">Place under the tongue</option>
+                  <option value="Apply topically">Apply topically</option>
+                </select>
+                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
+                  <option value="By mouth">By mouth</option>
+                  <option value="Place under the tongue">Place under the tongue</option>
+                  <option value="Apply topically">Apply topically</option>
+                </select>
               </form>
             </body>
             </div>
         </div>
         <div className = "Morning-update-add-remove">
           <div className = "Morning-update">
-            <input className = "Morning-update-text" type="submit" value="UPDATE">
-            </input>
+            <form action="database.php" method="post">
+              <input className = "Morning-update-text" type="submit" value="UPDATE">
+              </input>
+            </form>
           </div> 
           <div className = "Morning-add">
             <input className = "Morning-add-text" type="submit" value="ADD">
