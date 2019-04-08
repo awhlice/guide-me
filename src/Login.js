@@ -14,11 +14,11 @@ class Login extends Component {
         </div>
         <div className="Login-box">
         <body className="Login-box-edit">
-          <form action="database.php" method="post">
+          <form action="database.php" method="get">
             <input className = "Login-username" type="text" id="username" name="username" placeholder="Username">
             </input>
           </form>
-          <form action="database.php" method="post">
+          <form action="database.php" method="get">
             <input className = "Login-password" type="password" id="password" name="password" placeholder="Password">
             </input>
           </form>
