@@ -3,6 +3,7 @@ import {
   Route,
   HashRouter
 } from "react-router-dom";
+import Login from "./Login";
 import Home from "./Home";
 import Morning from "./Morning";
 
@@ -11,7 +12,8 @@ class Router extends Component {
     return (
       <HashRouter>
         <div>
-            <Route exact path="/" exact component={Home}/>
+            <Route exact path="/" exact component={Login}/>
+            <Route path="/home" component={Home}/>
             <Route path="/morning" component={Morning}/>
         </div>
       </HashRouter>
