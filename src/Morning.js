@@ -13,21 +13,14 @@ class Morning extends Component {
           <p className= "Morning-text">GUIDE ME</p>
         </div>
         <div className= "Morning-log-out">
-          <a
-            className="Morning-log-out-link"
-            href="https://reactjs.org"
-            target="_self"
-            rel="noopener noreferrer"
-          >
-            Log Out
-          </a>
+          <a className="Home-log-out-link"><NavLink to="/">Log Out</NavLink></a>
         </div>
         <div className="Morning-bar">
           <div className="Morning-bar-text">
             <p>Patient Name | Prescriptions | Morning </p>
           </div>
           <div className="Morning-bar-back">
-            <a className="Morning-back-link"><NavLink to="/">
+            <a className="Morning-back-link"><NavLink to="/home">
             <img src={arrow} className="Morning-arrow" alt="arrow" /> 
             </NavLink></a>
           </div>

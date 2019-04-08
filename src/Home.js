@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 import logo from './logo.svg';
-import Morning from './Morning';
 import './Home.css';
 
 class Home extends Component {
@@ -13,7 +12,7 @@ class Home extends Component {
           <p className= "Home-text">GUIDE ME</p>
         </div>
         <div className= "Home-log-out">
-          <a className="Home-log-out-link"><NavLink to="/morning">Log Out</NavLink></a>
+          <a className="Home-log-out-link"><NavLink to="/">Log Out</NavLink></a>
         </div>
         <body className="Home-bar">
         <p>Patient Name | Prescriptions</p>
