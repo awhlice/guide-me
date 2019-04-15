@@ -1,7 +1,19 @@
+.Search-container {
+  height: 100%;
+}
+
+.Search-left {
+  float: left;
+  width: 40%;
+  border-right: 1px solid lightgrey;
+  height: 610px;
+}
+
 .Search {
   background-color: #7AC6FF;
   display: flex;
   flex-direction: column;
+  flex: 0 0 50%;
 }
 
 .Search-header {
@@ -61,4 +73,35 @@
 
 .Search-space {
   margin-left: 300px;
+}
+
+.Calendar-section {
+  margin-top: 30px;
+  margin-left: 110px;
+}
+
+.Add-button {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.Add-link {
+  background-color: #77D353;
+  height: 35px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  color: white;
+}
+
+.Add-link a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.Add-link a:visited {
+  color: white;
+  text-decoration: none;
 }

@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import logo from './logo.svg';
 import './Search.css';
 import FilterForm from "./FilterForm";
+import ScrollingList from "./ScrollingList";
 
 class Search extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class Search extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e){
+  handleChange(e) {
     this.setState({
       patientFilter: e.target.value
     })
@@ -22,7 +23,7 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Search-container">
         <div className="Search">
           <div className="Search-header">
             <img src={logo} className="Search-logo" alt="logo" />
@@ -35,12 +36,15 @@ class Search extends Component {
             <p>Search Patients</p>
           </body>
         </div>
-        <FilterForm onChange={this.props.onChange}/>
-        <div className="Search-space">
-          {this.props.filteredPatients.map((item) => (
-            <p>{item.firstName}</p>
-          ))}
-        </div>
+          <div className="Search-left">
+            <FilterForm onChange={this.props.firstNameFilter} placeholder="First Name"/>
+            <FilterForm onChange={this.props.lastNameFilter} placeholder="Last Name"/>
+            <FilterForm onChange={this.props.lastNameFilter} placeholder="Date of Birth: MMDDYYYY"/>
+            <div className ="Add-button">
+              <a className="Add-link"><NavLink to="/home">ADD PATIENT</NavLink></a>
+            </div>
+          </div>
+          <ScrollingList filteredPatients={this.props.filteredPatients} />
       </div>
 
 
@@ -49,6 +53,10 @@ class Search extends Component {
 }
 
 export default Search;
+
+// {this.props.filteredPatients.map((item) => (
+//   <p>{item.firstName}</p>
+// ))}
 
 //<form>
   //<input

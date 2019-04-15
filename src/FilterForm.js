@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
+import './FilterForm.css';
 
 class FilterForm extends Component {
   constructor(props) {
@@ -19,10 +20,10 @@ class FilterForm extends Component {
 
   render() {
     return (
-      <div>
-        <form>
-          <input type="text" id="filter"
-            placeholder="Search Patients..."
+      <div className="Filters">
+        <form className="Filter-bar">
+          <input className = "Input-box" type="text" id="filter"
+            placeholder={this.props.placeholder}
             value={this.state.patientFilter}
             onChange={this.handleChange}/>
         </form>

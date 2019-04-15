@@ -1,0 +1,14 @@
+.Filters {
+}
+
+.Filter-bar {
+  margin-left: 60px;
+  margin-top: 40px;
+}
+
+.Input-box {
+  padding: 0.5em 0em 0.5em 0em;
+  width: 85%;
+  height: 30px;
+  font-size: 25px;
+}
