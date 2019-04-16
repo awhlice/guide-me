@@ -5,6 +5,50 @@ import arrow from './arrow.png';
 import './Morning.css';
 
 class Morning extends Component {
+  constructor() {
+    super();
+    this.state = {
+      prescriptions: [
+        {
+            name: 'Advil',
+            dosage: '50mg',
+            instructions: 'By mouth'
+        },
+        {
+            name: 'Tylenol',
+            dosage: '30mg',
+            instructions: 'By mouth'
+        }
+      ]};
+  }
+
+  logOut = () => {
+    this.props.history.push('/')
+  }
+
+  updatePrescription = idx => () => {
+    this.setState({
+      prescriptions: this.state.prescriptions.filter((s, sidx) => idx !== sidx)
+    });
+  };
+
+  addPrescription = () => {
+    this.setState({
+      prescriptions: this.state.prescriptions.concat([
+        {
+            name: 'Name',
+            dosage: 'Dosage',
+            instructions: ''
+        }])
+    });
+  };
+
+  removePrescription = idx => () => {
+    this.setState({
+      prescriptions: this.state.prescriptions.filter((s, sidx) => idx !== sidx)
+    });
+  };
+
   render() {
     return (
       <div className="Morning">
@@ -12,9 +56,13 @@ class Morning extends Component {
           <img src={logo} className="Morning-logo" alt="logo" /> 
           <p className= "Morning-text">GUIDE ME</p>
         </div>
-        <div className= "Morning-log-out">
-          <a className="Home-log-out-link"><NavLink to="/">Log Out</NavLink></a>
-        </div>
+        <button
+          className="Morning-log-out"
+          type="button"
+          onClick={this.logOut}
+        >
+        Log Out
+        </button>
         <div className="Morning-bar">
           <div className="Morning-bar-text">
             <p>Patient Name | Prescriptions | Morning </p>
@@ -26,112 +74,43 @@ class Morning extends Component {
           </div>
         </div>
         <div className = "Morning-body">
-          <div className = "Morning-prescription"> PRESCRIPTION 
-            <body className = "Morning-prescription-edit">
-             <form action="database.php" method="post">
-               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder="Name">
-               </input>
-              </form>
-            </body>
+          <div className = "Morning-prescription"> PRESCRIPTION
+              {this.state.prescriptions.map((prescription, idx) => (
+                <div>
+                  <button
+                    className="Morning-prescription-remove"
+                    type="button"
+                    onClick={this.removePrescription(idx)}
+                  >
+                  -
+                  </button>
+                  {" "}
+                  <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder={prescription.name} />
+                </div>
+              ))}
           </div>
           <div className = "Morning-dosage"> DOSAGE
-            <body className = "Morning-dosage-edit">
-              <form action="database.php" method="post">
-               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
-               </input>
-               <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder="Dosage">
-               </input>
-              </form>
-            </body>
-            </div>
-          <div className = "Morning-instruction"> INSTRUCTION
-            <body className = "Morning-instruction-edit">
-              <form action="database.php" method="post">
-                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
-                  <option value="By mouth">By mouth</option>
-                  <option value="Place under the tongue">Place under the tongue</option>
-                  <option value="Apply topically">Apply topically</option>
-                </select>
-                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
-                  <option value="By mouth">By mouth</option>
-                  <option value="Place under the tongue">Place under the tongue</option>
-                  <option value="Apply topically">Apply topically</option>
-                </select>
-                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
-                  <option value="By mouth">By mouth</option>
-                  <option value="Place under the tongue">Place under the tongue</option>
-                  <option value="Apply topically">Apply topically</option>
-                </select>
-                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
-                  <option value="By mouth">By mouth</option>
-                  <option value="Place under the tongue">Place under the tongue</option>
-                  <option value="Apply topically">Apply topically</option>
-                </select>
-                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
-                  <option value="By mouth">By mouth</option>
-                  <option value="Place under the tongue">Place under the tongue</option>
-                  <option value="Apply topically">Apply topically</option>
-                </select>
-                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
-                  <option value="By mouth">By mouth</option>
-                  <option value="Place under the tongue">Place under the tongue</option>
-                  <option value="Apply topically">Apply topically</option>
-                </select>
-                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
-                  <option value="By mouth">By mouth</option>
-                  <option value="Place under the tongue">Place under the tongue</option>
-                  <option value="Apply topically">Apply topically</option>
-                </select>
-                <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
-                  <option value="By mouth">By mouth</option>
-                  <option value="Place under the tongue">Place under the tongue</option>
-                  <option value="Apply topically">Apply topically</option>
-                </select>
-              </form>
-            </body>
-            </div>
-        </div>
-        <div className = "Morning-update-add-remove">
-          <div className = "Morning-update">
-            <form action="database.php" method="post">
-              <input className = "Morning-update-text" type="submit" value="UPDATE">
-              </input>
-            </form>
-          </div> 
-          <div className = "Morning-add">
-            <input className = "Morning-add-text" type="submit" value="ADD">
-            </input>
-          </div> 
-          <div className = "Morning-remove">
-            <input className = "Morning-remove-text" type="submit" value="REMOVE">
-            </input>
+              {this.state.prescriptions.map(prescription => (
+                <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder={prescription.dosage} />
+              ))}
           </div>
+          <div className = "Morning-instruction"> INSTRUCTION
+              {this.state.prescriptions.map(prescription => (
+                  <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
+                            <option value={prescription.instructions}>{prescription.instructions}</option>
+                            <option value="Place under the tongue">Place under the tongue</option>
+                            <option value="Apply topically">Apply topically</option>
+                          </select>
+              ))}
+          </div>
+        </div>
+        <div className = "Morning-update-add">
+          <button className = "Morning-update" type="button" onClick={this.updatePrescription}>
+            UPDATE
+          </button>
+          <button className = "Morning-add" type="button" onClick={this.addPrescription}>
+            ADD
+          </button>
         </div>
       </div>
     );
