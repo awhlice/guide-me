@@ -8,6 +8,10 @@ class Home extends Component {
     super();
   }
 
+  logOut = () => {
+    this.props.history.push('/')
+  }
+  
   goMorning = () => {
     this.props.history.push('/morning')
   }
