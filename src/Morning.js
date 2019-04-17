@@ -17,7 +17,7 @@ class Morning extends Component {
         {
             name: 'Tylenol',
             dosage: '30mg',
-            instructions: 'By mouth'
+            instructions: 'Apply topically'
         }
       ]};
   }
@@ -50,6 +50,10 @@ class Morning extends Component {
   };
 
   render() {
+  	const instructions = ['By mouth', 'Apply topically', 'Place onto the skin', 'Spray into nose', 'By nebulization', 
+  						  'Inhale into the lungs', 'Apply topically', 'Place drops into both eyes', 'Place into the ear', 
+  						  'Place under the tongue', 'Place between the gums and cheek', 'Inject into muscle', 
+  						  'Inject into fat layer under the skin', 'Inject into rectum', 'Inject into vagina']
     return (
       <div className="Morning">
         <div className="Morning-header">
@@ -97,19 +101,21 @@ class Morning extends Component {
           <div className = "Morning-instruction"> INSTRUCTION
               {this.state.prescriptions.map(prescription => (
                   <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
-                            <option value={prescription.instructions}>{prescription.instructions}</option>
-                            <option value="Place under the tongue">Place under the tongue</option>
-                            <option value="Apply topically">Apply topically</option>
-                          </select>
+                    <option value={prescription.instructions}>{prescription.instructions}</option>
+                    {instructions.map(instruction => {
+                    	if (instruction != prescription.instructions)
+                    		return <option value={instruction}>{instruction}</option>
+                    })}
+                  </select>
               ))}
           </div>
         </div>
-        <div className = "Morning-update-add">
-          <button className = "Morning-update" type="button" onClick={this.updatePrescription}>
-            UPDATE
-          </button>
+        <div className = "Morning-add-update">
           <button className = "Morning-add" type="button" onClick={this.addPrescription}>
             ADD
+          </button>
+          <button className = "Morning-update" type="button" onClick={this.updatePrescription}>
+            UPDATE
           </button>
         </div>
       </div>
