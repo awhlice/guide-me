@@ -83,7 +83,7 @@ class TimeOfDay extends Component {
     			<div className = "TimeOfDay-dosage-prescription"> DOSAGE </div>
     			<div className = "TimeOfDay-instruction-prescription"> INSTRUCTION </div>
     		</div>
-    		<div className = "TimeOfDay-body-scroll" style={{overflow: 'auto', maxHeight: 360}}>
+    		<div className = "TimeOfDay-body-scroll" style={{overflow: 'auto', maxHeight: 430}}>
 		      <div className = "TimeOfDay-prescription">
 		          {this.state.prescriptions.map((prescription, idx) => (
 		            <div>
