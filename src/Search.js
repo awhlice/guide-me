@@ -8,17 +8,6 @@ import ScrollingList from "./ScrollingList";
 class Search extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      patientFilter: ""
-    }
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(e) {
-    this.setState({
-      patientFilter: e.target.value
-    })
-    this.props.onChange(e.target.value)
   }
 
   render() {
@@ -37,38 +26,17 @@ class Search extends Component {
           </body>
         </div>
           <div className="Search-left">
-            <FilterForm onChange={this.props.firstNameFilter} placeholder="First Name"/>
-            <FilterForm onChange={this.props.lastNameFilter} placeholder="Last Name"/>
-            <FilterForm onChange={this.props.lastNameFilter} placeholder="Date of Birth: MMDDYYYY"/>
+            <FilterForm onChange={this.props.handleFilter} firstName={this.props.firstName} lastName={this.props.lastName} birthDate={this.props.birthDate} placeholder="First Name"/>
+            <FilterForm onChange={this.props.handleFilter} firstName={this.props.firstName} lastName={this.props.lastName} birthDate={this.props.birthDate} placeholder="Last Name"/>
+            <FilterForm onChange={this.props.handleFilter} firstName={this.props.firstName} lastName={this.props.lastName} birthDate={this.props.birthDate} placeholder="Date of Birth: MMDDYYYY"/>
             <div className ="Add-button">
               <a className="Add-link"><NavLink to="/home">ADD PATIENT</NavLink></a>
             </div>
           </div>
           <ScrollingList filteredPatients={this.props.filteredPatients} />
       </div>
-
-
     )
   }
 }
 
 export default Search;
-
-// {this.props.filteredPatients.map((item) => (
-//   <p>{item.firstName}</p>
-// ))}
-
-//<form>
-  //<input
-    //type="text"
-    //placeholder="Search Patients..."
-    //value={this.props.filterText}
-    //ref="filterTextInput"
-    //onChange={this.handleChange}
-  ///>
-//</form>
-
-  // <label htmlFor="filter">Filter by Poet: </label>
-  // <input type="text" id="filter"
-  //   value={this.state.poetFilter}
-  //   onChange={this.handleChange}/>

@@ -8,46 +8,45 @@ class VisiblePatients extends Component {
     super()
     this.state = {
       patients: [],
-      filteredPatients: []
+      filteredPatients: [],
+      firstName: "",
+      lastName: "",
+      birthDate: ""
     }
-    this.firstNameFilter = this.firstNameFilter.bind(this);
-    this.lastNameFilter = this.lastNameFilter.bind(this);
+    this.handleFilter = this.handleFilter.bind(this);
   }
 
   componentWillMount() {
     this.setState({
-      patients: [{firstName: "Gregory", lastName: "Naratil"}, {firstName: "Alice", lastName: "Wu"}, {firstName: "Robert", lastName: "Gerdisch"}, {firstName: "Evelyn", lastName: "Chan"}, {firstName: "Xenophon", lastName: "Papademetris"}, {firstName: "Dave", lastName: "O'Connor"}],
-      filteredPatients: [{firstName: "Gregory", lastName: "Naratil"}, {firstName: "Alice", lastName: "Wu"}, {firstName: "Robert", lastName: "Gerdisch"}, {firstName: "Evelyn", lastName: "Chan"}, {firstName: "Xenophon", lastName: "Papademetris"}, {firstName: "Dave", lastName: "O'Connor"}]
+      patients: [{firstName: "Gregory", lastName: "Naratil", dateOfBirth:"07101998"}, {firstName: "Alice", lastName: "Wu", dateOfBirth:"07101998"}, {firstName: "Robert", lastName: "Gerdisch", dateOfBirth:"07101997"}, {firstName: "Evelyn", lastName: "Chan", dateOfBirth:"08101998"}, {firstName: "Xenophon", lastName: "Papademetris", dateOfBirth:"07111998"}, {firstName: "Dave", lastName: "O'Connor", dateOfBirth:"12101998"}],
+      filteredPatients: [{firstName: "Gregory", lastName: "Naratil", dateOfBirth:"07101998"}, {firstName: "Alice", lastName: "Wu", dateOfBirth:"07101998"}, {firstName: "Robert", lastName: "Gerdisch", dateOfBirth:"07101997"}, {firstName: "Evelyn", lastName: "Chan", dateOfBirth:"08101998"}, {firstName: "Xenophon", lastName: "Papademetris", dateOfBirth:"07111998"}, {firstName: "Dave", lastName: "O'Connor", dateOfBirth:"12101998"}],
+      firstName: "",
+      lastName: "",
+      birthDate: ""
     })
   }
 
-  firstNameFilter(patientFilter) {
+  handleFilter(filterFirst, filterLast, filterDate) {
     let filteredPatients = this.state.patients
     filteredPatients = filteredPatients.filter((patient) => {
-      let patientName = patient.firstName.toLowerCase()
-      return patientName.indexOf(
-        patientFilter.toLowerCase()) !== -1
+      let patientFirst = patient.firstName.toLowerCase()
+      let patientLast = patient.lastName.toLowerCase()
+      let patientDate = patient.dateOfBirth
+      return patientFirst.indexOf(filterFirst.toLowerCase()) !== -1 &&
+            patientLast.indexOf(filterLast.toLowerCase()) !== -1 &&
+            patientDate.startsWith(filterDate)
     })
     this.setState({
-      filteredPatients
-    })
-  }
-
-  lastNameFilter(patientFilter) {
-    let filteredPatients = this.state.patients
-    filteredPatients = filteredPatients.filter((patient) => {
-      let patientName = patient.lastName.toLowerCase()
-      return patientName.indexOf(
-        patientFilter.toLowerCase()) !== -1
-    })
-    this.setState({
-      filteredPatients
+      filteredPatients: filteredPatients,
+      firstName: filterFirst,
+      lastName: filterLast,
+      birthDate: filterDate
     })
   }
 
   render() {
     return (
-      <Search firstNameFilter={this.firstNameFilter} lastNameFilter={this.lastNameFilter} filteredPatients={this.state.filteredPatients} />
+      <Search handleFilter={this.handleFilter} firstName={this.state.firstName} lastName={this.state.lastName} birthDate={this.state.birthDate} filteredPatients={this.state.filteredPatients} />
     )
   }
 }
