@@ -17,19 +17,19 @@ class Home extends Component {
   }
 
   goAfternoon = () => {
-    this.props.history.push('/morning')
+    this.props.history.push('/afternoon')
   }
 
   goEvening = () => {
-    this.props.history.push('/morning')
+    this.props.history.push('/evening')
   }
 
   goBedtime = () => {
-    this.props.history.push('/morning')
+    this.props.history.push('/bedtime')
   }
 
   goAsNeeded = () => {
-    this.props.history.push('/morning')
+    this.props.history.push('/as-needed')
   }
 
   goPrint = () => {
@@ -40,11 +40,11 @@ class Home extends Component {
     return (
       <div className="Home">
         <div className="Home-header">
-          <img src={logo} className="Morning-logo" alt="logo" /> 
-          <p className= "Morning-text">GUIDE ME</p>
+          <img src={logo} className="Home-logo" alt="logo" /> 
+          <p className= "Home-text">GUIDE ME</p>
         </div>
         <button
-          className="Morning-log-out"
+          className="Home-log-out"
           type="button"
           onClick={this.logOut}
         >
