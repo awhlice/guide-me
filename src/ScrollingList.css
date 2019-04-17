@@ -1,0 +1,9 @@
+.Scroll-list {
+  font-size: 40px;
+}
+
+.List-item {
+  border-bottom: 1px solid lightgrey;
+  padding: 5px 5px 5px 15px;
+  cursor: pointer;
+}

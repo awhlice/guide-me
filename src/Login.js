@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 import logo from './logo.svg';
-import Home from './Home';
 import './Login.css';
 
 class Login extends Component {
@@ -24,7 +23,7 @@ class Login extends Component {
           </form>
         </body>
         <body className = "Login-button">
-          <a className="Login-link"><NavLink to="/Home">LOG IN</NavLink></a>
+          <a className="Login-link"><NavLink to="/search">LOG IN</NavLink></a>
         </body>
         </div>
         <div className="forgot-password">

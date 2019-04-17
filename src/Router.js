@@ -4,7 +4,10 @@ import {
   HashRouter
 } from "react-router-dom";
 import Login from "./Login";
+import Search from "./Search";
 import Home from "./Home";
+import Morning from "./Morning";
+import VisiblePatients from "./VisiblePatients";
 import TimeOfDay from "./TimeOfDay";
 
 class Router extends Component {
@@ -13,6 +16,7 @@ class Router extends Component {
       <HashRouter>
         <div>
             <Route exact path="/" exact component={Login}/>
+            <Route path="/search" component={VisiblePatients}/>
             <Route path="/home" component={Home}/>
             <Route path="/morning" render={(props) => <TimeOfDay label={"Morning"} color={"#F39697"} {...props} /> } />
             <Route path="/afternoon" render={(props) => <TimeOfDay label={"Afternoon"} color={"#F8B658"} {...props} /> } />
