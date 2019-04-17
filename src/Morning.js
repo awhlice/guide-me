@@ -78,38 +78,45 @@ class Morning extends Component {
           </div>
         </div>
         <div className = "Morning-body">
-          <div className = "Morning-prescription"> PRESCRIPTION
-              {this.state.prescriptions.map((prescription, idx) => (
-                <div>
-                  <button
-                    className="Morning-prescription-remove"
-                    type="button"
-                    onClick={this.removePrescription(idx)}
-                  >
-                  -
-                  </button>
-                  {" "}
-                  <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder={prescription.name} />
-                </div>
-              ))}
-          </div>
-          <div className = "Morning-dosage"> DOSAGE
-              {this.state.prescriptions.map(prescription => (
-                <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder={prescription.dosage} />
-              ))}
-          </div>
-          <div className = "Morning-instruction"> INSTRUCTION
-              {this.state.prescriptions.map(prescription => (
-                  <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
-                    <option value={prescription.instructions}>{prescription.instructions}</option>
-                    {instructions.map(instruction => {
-                    	if (instruction != prescription.instructions)
-                    		return <option value={instruction}>{instruction}</option>
-                    })}
-                  </select>
-              ))}
-          </div>
-        </div>
+    		<div className="Morning-edit">
+    			<div className = "Morning-edit-prescription"> PRESCRIPTION </div>
+    			<div className = "Morning-dosage-prescription"> DOSAGE </div>
+    			<div className = "Morning-instruction-prescription"> INSTRUCTION </div>
+    		</div>
+    		<div className = "Morning-body-scroll" style={{overflow: 'auto', maxHeight: 360}}>
+		      <div className = "Morning-prescription">
+		          {this.state.prescriptions.map((prescription, idx) => (
+		            <div>
+		              <button
+		                className="Morning-prescription-remove"
+		                type="button"
+		                onClick={this.removePrescription(idx)}
+		              >
+		              -
+		              </button>
+		              {" "}
+		              <input className = "Morning-edit-bar" type="text" id="drug_name" name="drug_name" placeholder={prescription.name} />
+		            </div>
+		          ))}
+		      </div>
+		      <div className = "Morning-dosage">
+		          {this.state.prescriptions.map(prescription => (
+		            <input className = "Morning-edit-bar" type="text" id="drug_dosage" name ="drug_instructions" placeholder={prescription.dosage} />
+		          ))}
+		      </div>
+		      <div className = "Morning-instruction">
+		          {this.state.prescriptions.map(prescription => (
+		              <select className = "Morning-edit-bar" id="drug_instructions" name ="drug_instructions">
+		                <option value={prescription.instructions}>{prescription.instructions}</option>
+		                {instructions.map(instruction => {
+		                	if (instruction != prescription.instructions)
+		                		return <option value={instruction}>{instruction}</option>
+		                })}
+		              </select>
+		          ))}
+		      </div>
+		    </div>
+		</div>
         <div className = "Morning-add-update">
           <button className = "Morning-add" type="button" onClick={this.addPrescription}>
             ADD

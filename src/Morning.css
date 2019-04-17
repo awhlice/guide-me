@@ -70,6 +70,30 @@
   color: white;
 }
 
+.Morning-edit {
+  background-color: #F39697;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.Morning-edit-prescription {
+  grid-column: 1;
+}
+
+.Morning-edit-dosage {
+  grid-column: 2;
+}
+
+.Morning-bar-instruction {
+  grid-column: 3;
+}
+
 .Morning-body {
   background-color: #F39697;
   height: 500px;
@@ -77,6 +101,10 @@
   font-weight: bold;
   color: white;
   text-align: center
+}
+
+.Morning-body-scroll {
+  margin-top: 0px;
 }
 
 .Morning-edit-bar {
@@ -113,7 +141,7 @@
   width: 33.333%;
 }
 
-.Morning-update-add {
+.Morning-add-update {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -124,8 +152,8 @@
   grid-template-rows: 50%;
 }
 
-.Morning-update {
-  background-color: #7AC6FF;
+.Morning-add {
+  background-color: #77D353;
   grid-row: 1;
   width: 100%;
   border: none;
@@ -134,8 +162,8 @@
   color: white;
 }
 
-.Morning-add {
-  background-color: #77D353;
+.Morning-update {
+  background-color: #7AC6FF;
   grid-row: 2;
   width: 100%;
   border: none;
@@ -143,3 +171,4 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
