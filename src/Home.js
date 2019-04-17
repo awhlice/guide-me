@@ -4,6 +4,38 @@ import logo from './logo.svg';
 import './Home.css';
 
 class Home extends Component {
+  constructor() {
+    super();
+  }
+
+  logOut = () => {
+    this.props.history.push('/')
+  }
+  
+  goMorning = () => {
+    this.props.history.push('/morning')
+  }
+
+  goAfternoon = () => {
+    this.props.history.push('/afternoon')
+  }
+
+  goEvening = () => {
+    this.props.history.push('/evening')
+  }
+
+  goBedtime = () => {
+    this.props.history.push('/bedtime')
+  }
+
+  goAsNeeded = () => {
+    this.props.history.push('/as-needed')
+  }
+
+  goPrint = () => {
+    this.props.history.push('/morning')
+  }
+
   render() {
     return (
       <div className="Home">
@@ -11,30 +43,58 @@ class Home extends Component {
           <img src={logo} className="Home-logo" alt="logo" /> 
           <p className= "Home-text">GUIDE ME</p>
         </div>
-        <div className= "Home-log-out">
-          <a className="Home-log-out-link"><NavLink to="/">Log Out</NavLink></a>
-        </div>
+        <button
+          className="Home-log-out"
+          type="button"
+          onClick={this.logOut}
+        >
+        Log Out
+        </button>
         <body className="Home-bar">
         <p>Patient Name | Prescriptions</p>
         </body>
-          <body className = "Home-morning">
-            <a className="Home-morning-link"><NavLink to="/morning">MORNING</NavLink></a>
-          </body>
-          <body className = "Home-afternoon">
-          	<a className="Home-morning-link"><NavLink to="/morning">AFTERNOON</NavLink></a>
-          </body>
-          <body className = "Home-evening">
-          	<a className="Home-morning-link"><NavLink to="/morning">EVENING</NavLink></a>
-          </body>
-          <body className = "Home-bedtime">
-          	<a className="Home-morning-link"><NavLink to="/morning">BEDTIME</NavLink></a>
-          </body>
-          <body className = "Home-as-needed">
-          	<a className="Home-morning-link"><NavLink to="/morning">AS-NEEDED</NavLink></a>
-          </body>
-          <body className = "Home-print">
-          	<a className="Home-morning-link"><NavLink to="/morning">PRINT</NavLink></a>
-          </body>
+          <button
+              className="Home-morning"
+              type="button"
+              onClick={this.goMorning}
+          >
+          MORNING
+          </button>
+          <button
+              className="Home-afternoon"
+              type="button"
+              onClick={this.goAfternoon}
+          >
+          AFTERNOON
+          </button>
+          <button
+              className="Home-evening"
+              type="button"
+              onClick={this.goEvening}
+          >
+          EVENING
+          </button>
+          <button
+              className="Home-bedtime"
+              type="button"
+              onClick={this.goBedtime}
+          >
+          BEDTIME
+          </button>
+          <button
+              className="Home-as-needed"
+              type="button"
+              onClick={this.goAsNeeded}
+          >
+          AS-NEEDED
+          </button>
+          <button
+              className="Home-print"
+              type="button"
+              onClick={this.goPrint}
+          >
+          PRINT
+          </button>
       </div>
     );
   }

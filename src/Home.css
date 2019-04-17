@@ -19,6 +19,10 @@
   height: calc(68px + 2vmin);
 }
 
+.Home button:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+}
+
 .Home-text {
   position: absolute;
   margin-top: 0px;
@@ -33,18 +37,11 @@
   background-color: #CFCFCF;
   margin-top: 30px;
   right: 30px;
-  padding: 0.3em 0.5em 0.3em 0.5em;
-}
-
-.Home-log-out-link a {
-  text-decoration: none;
-  color: white;
-}
-
-.Home-log-out-link {
-  text-align: center;
+  height: 32.5px;
+  border: none;
   font-size: calc(10px + 2vmin);
   font-weight: bold;
+  color: white;
 }
 
 .Home-bar {
@@ -61,104 +58,54 @@
 
 .Home-morning {
   background-color: #F39697;
-  display: flex;
-  flex-direction: column;
-}
-
-.Home-morning-link a {
-  text-decoration: none;
-  color: white;
-}
-
-.Home-morning-link {
-  text-align: center;
+  width: 100%;
+  border: none;
   font-size: calc(100px + 2vmin);
   font-weight: bold;
+  color: white;
 }
 
 .Home-afternoon {
   background-color: #F8B658;
-  display: flex;
-  flex-direction: column;
-}
-
-.Home-afternoon-link a {
-  text-decoration: none;
-  color: white;
-}
-
-.Home-afternoon-link {
-  text-align: center;
+  width: 100%;
+  border: none;
   font-size: calc(100px + 2vmin);
   font-weight: bold;
+  color: white;
 }
 
 .Home-evening {
   background-color: #7E4B68;
-  display: flex;
-  flex-direction: column;
-}
-
-.Home-evening-link a {
-  text-decoration: none;
-  color: white;
-}
-
-.Home-evening-link {
-  text-align: center;
+  width: 100%;
+  border: none;
   font-size: calc(100px + 2vmin);
   font-weight: bold;
+  color: white;
 }
 
 .Home-bedtime {
   background-color: #292965;
-  display: flex;
-  flex-direction: column;
-}
-
-.Home-bedtime-link a {
-  text-decoration: none;
-  color: white;
-}
-
-.Home-bedtime-link {
-  text-align: center;
+  width: 100%;
+  border: none;
   font-size: calc(100px + 2vmin);
   font-weight: bold;
+  color: white;
 }
 
 .Home-as-needed {
   background-color: #545454;
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.Home-as-needed-link a {
-  text-decoration: none;
-  color: white;
-}
-
-.Home-as-needed-link {
-  text-align: center;
+  width: 100%;
+  border: none;
   font-size: calc(100px + 2vmin);
   font-weight: bold;
+  color: white;
 }
 
 .Home-print {
   background-color: #77D353;
-  display: flex;
-  flex-direction: column;
-}
-
-.Home-print-link a {
-  text-decoration: none;
-  color: white;
-}
-
-.Home-print-link {
-  text-align: center;
+  width: 100%;
+  border: none;
   font-size: calc(100px + 2vmin);
   font-weight: bold;
+  color: white;
 }

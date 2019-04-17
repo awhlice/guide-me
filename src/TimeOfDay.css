@@ -1,11 +1,11 @@
-.Morning {
+.TimeOfDay {
   background-color: #7AC6FF;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.Morning-header {
+.TimeOfDay-header {
   height: calc(130px + 2vmin);
   width: 50%;
   margin-left: auto;
@@ -14,13 +14,13 @@
   overflow: hidden;
 }
 
-.Morning-logo {
+.TimeOfDay-logo {
   float: left;
   margin-top: 30px;
   height: calc(68px + 2vmin);
 }
 
-.Morning-text {
+.TimeOfDay-text {
   position: absolute;
   margin-top: 0px;
   padding-left: 100px;
@@ -29,23 +29,19 @@
   color: white;
 }
 
-.Morning-log-out {
+.TimeOfDay-log-out {
   position: absolute;
   background-color: #CFCFCF;
   margin-top: 30px;
   right: 30px;
-  padding: 0.3em 0.5em 0.3em 0.5em;
-}
-
-.Morning-log-out-link {
-  text-align: center;
-  text-decoration: none;
+  height: 32.5px;
+  border: none;
   font-size: calc(10px + 2vmin);
   font-weight: bold;
   color: white;
 }
 
-.Morning-bar {
+.TimeOfDay-bar {
   background-color: #CFCFCF;
   line-height: 0px;
   padding: 0em 0.5em 0em 0.5em;
@@ -54,19 +50,19 @@
   color: white;
 }
 
-.Morning-bar-text {
+.TimeOfDay-bar-text {
   float: left;
 }
 
-.Morning-bar-back {
+.TimeOfDay-bar-back {
   float: right;
 }
 
-.Morning-arrow {
+.TimeOfDay-arrow {
   height: calc(30px + 2vmin);
 }
 
-.Morning-back-link {
+.TimeOfDay-back-link {
   text-align: center;
   text-decoration: none;
   font-size: calc(10px + 2vmin);
@@ -74,95 +70,103 @@
   color: white;
 }
 
-.Morning-body {
-  background-color: #F39697;
-  height: 500px;
+.TimeOfDay-edit {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.TimeOfDay-edit-prescription {
+  grid-column: 1;
+}
+
+.TimeOfDay-edit-dosage {
+  grid-column: 2;
+}
+
+.TimeOfDay-bar-instruction {
+  grid-column: 3;
+}
+
+.TimeOfDay-body {
+  height: 590px;
   font-size: calc(10px + 2vmin);
   font-weight: bold;
   color: white;
   text-align: center
 }
 
-.Morning-edit-bar {
+.TimeOfDay-body-scroll {
+  margin-top: 0px;
+}
+
+.TimeOfDay-edit-bar {
   width: 80%;
 }
 
-.Morning-prescription {
+.TimeOfDay button:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+}
+
+.TimeOfDay-prescription {
   padding: 0.5em 0em 0.5em 0em;
   float: left; 
   width: 33.333%;
 }
 
-.Morning-prescription-edit {
-  background-color: #F39697;
+.TimeOfDay-prescription-remove {
+  background-color: #ED4F51;
+  border: none;
+  font-weight: bold;
+  font-size: calc(2px + 2vmin);
+  color: white;
 }
 
-.Morning-dosage {
+.TimeOfDay-dosage {
   padding: 0.5em 0em 0.5em 0em;
   display: inline-block; 
   width: 33.333%;
 }
 
-.Morning-dosage-edit {
-}
-
-.Morning-instruction {
-    padding: 0.5em 0em 0.5em 0em;
+.TimeOfDay-instruction {
+  padding: 0.5em 0em 0.5em 0em;
   float: right; 
   width: 33.333%;
 }
 
-.Morning-instruction-edit {
-}
-
-.Morning-update-add-remove {
+.TimeOfDay-add-update {
   position: absolute;
   bottom: 0;
-  height: 100px;
   width: 100%;
   font-weight: bold;
   color: white;
   text-align: center;
   display: grid;
-  grid-template-rows: 33.333%;
-  grid-auto-rows: 33.333%;
+  grid-template-rows: 50%;
 }
 
-.Morning-update {
-  background-color: #7AC6FF;
-  grid-row: 1;
-}
-
-.Morning-update-text {
-  background: none;
-  border: none;
-  font-weight: bold;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.Morning-add {
+.TimeOfDay-add {
   background-color: #77D353;
+  grid-row: 1;
+  width: 100%;
+  border: none;
+  font-weight: bold;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.TimeOfDay-update {
+  background-color: #7AC6FF;
   grid-row: 2;
-}
-
-.Morning-add-text {
-  background: none;
+  width: 100%;
   border: none;
   font-weight: bold;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.Morning-remove {
-  background-color: #ED4F51;
-  grid-row: 3;
-}
-
-.Morning-remove-text {
-  background: none;
-  border: none;
-  font-weight: bold;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
