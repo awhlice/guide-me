@@ -40,23 +40,20 @@
   color: white;
 }
 
+.Search button:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+}
+
 .Search-log-out {
   position: absolute;
   background-color: #CFCFCF;
   margin-top: 30px;
   right: 30px;
-  padding: 0.3em 0.5em 0.3em 0.5em;
-}
-
-.Search-log-out-link a {
-  text-decoration: none;
-  color: white;
-}
-
-.Search-log-out-link {
-  text-align: center;
+  height: 32.5px;
+  border: none;
   font-size: calc(10px + 2vmin);
   font-weight: bold;
+  color: white;
 }
 
 .Search-bar {
@@ -86,7 +83,7 @@
   margin-bottom: 20px;
 }
 
-.Add-link {
+.Add-link a {
   background-color: #77D353;
   height: 35px;
   font-size: 25px;
@@ -94,14 +91,9 @@
   text-align: center;
   padding: 10px 10px 10px 10px;
   color: white;
-}
-
-.Add-link a:link {
-  color: white;
   text-decoration: none;
 }
 
-.Add-link a:visited {
-  color: white;
-  text-decoration: none;
+.Add-link a:hover {
+  background-color: #96ef73;
 }

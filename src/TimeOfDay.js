@@ -50,14 +50,14 @@ class TimeOfDay extends Component {
   };
 
   render() {
-  	const instructions = ['By mouth', 'Apply topically', 'Place onto the skin', 'Spray into nose', 'By nebulization', 
-  						  'Inhale into the lungs', 'Apply topically', 'Place drops into both eyes', 'Place into the ear', 
-  						  'Place under the tongue', 'Place between the gums and cheek', 'Inject into muscle', 
+  	const instructions = ['By mouth', 'Apply topically', 'Place onto the skin', 'Spray into nose', 'By nebulization',
+  						  'Inhale into the lungs', 'Apply topically', 'Place drops into both eyes', 'Place into the ear',
+  						  'Place under the tongue', 'Place between the gums and cheek', 'Inject into muscle',
   						  'Inject into fat layer under the skin', 'Inject into rectum', 'Inject into vagina']
     return (
       <div className="TimeOfDay">
         <div className="TimeOfDay-header">
-          <img src={logo} className="TimeOfDay-logo" alt="logo" /> 
+          <img src={logo} className="TimeOfDay-logo" alt="logo" />
           <p className= "TimeOfDay-text">GUIDE ME</p>
         </div>
         <button
@@ -69,11 +69,11 @@ class TimeOfDay extends Component {
         </button>
         <div className="TimeOfDay-bar">
           <div className="TimeOfDay-bar-text">
-            <p>Patient Name | Prescriptions | {this.props.label} </p>
+            <p>{this.props.location.state.currentPatient} | Prescriptions | {this.props.label} </p>
           </div>
           <div className="TimeOfDay-bar-back">
             <a className="TimeOfDay-back-link"><NavLink to="/home">
-            <img src={arrow} className="TimeOfDay-arrow" alt="arrow" /> 
+            <img src={arrow} className="TimeOfDay-arrow" alt="arrow" />
             </NavLink></a>
           </div>
         </div>

@@ -6,7 +6,6 @@ import {
 import Login from "./Login";
 import Search from "./Search";
 import Home from "./Home";
-import Morning from "./Morning";
 import VisiblePatients from "./VisiblePatients";
 import TimeOfDay from "./TimeOfDay";
 
@@ -15,9 +14,9 @@ class Router extends Component {
     return (
       <HashRouter>
         <div>
-            <Route exact path="/" exact component={Login}/>
+            <Route exact path="/" render={(props) => <Login {...props} /> } />
             <Route path="/search" component={VisiblePatients}/>
-            <Route path="/home" component={Home}/>
+            <Route path="/home/:currentPatient" render={(props) => <Home currentPatient={props.match.params.currentPatient} {...props} /> } />
             <Route path="/morning" render={(props) => <TimeOfDay label={"Morning"} color={"#F39697"} {...props} /> } />
             <Route path="/afternoon" render={(props) => <TimeOfDay label={"Afternoon"} color={"#F8B658"} {...props} /> } />
             <Route path="/evening" render={(props) => <TimeOfDay label={"Evening"} color={"#7E4B68"} {...props} /> } />

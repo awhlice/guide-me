@@ -26,9 +26,9 @@ class Login extends Component {
           <a className="Login-link"><NavLink to="/search">LOG IN</NavLink></a>
         </body>
         </div>
-        <div className="forgot-password">
+        <body className="forgot-password">
           <a className="forgot-pw-link"><NavLink to="/">Forgot password?</NavLink></a>
-        </div>
+        </body>
         <div className="bottom"></div>
       </div>
     );

@@ -11,36 +11,54 @@ class Home extends Component {
   logOut = () => {
     this.props.history.push('/')
   }
-  
+
   goMorning = () => {
-    this.props.history.push('/morning')
+    this.props.history.push({
+        pathname:'/morning',
+        state: { currentPatient: this.props.match.params.currentPatient }
+    })
   }
 
   goAfternoon = () => {
-    this.props.history.push('/afternoon')
+    this.props.history.push({
+        pathname:'/afternoon',
+        state: { currentPatient: this.props.match.params.currentPatient }
+    })
   }
 
   goEvening = () => {
-    this.props.history.push('/evening')
+    this.props.history.push({
+        pathname:'/evening',
+        state: { currentPatient: this.props.match.params.currentPatient }
+    })
   }
 
   goBedtime = () => {
-    this.props.history.push('/bedtime')
+    this.props.history.push({
+        pathname:'/bedtime',
+        state: { currentPatient: this.props.match.params.currentPatient }
+    })
   }
 
   goAsNeeded = () => {
-    this.props.history.push('/as-needed')
+    this.props.history.push({
+        pathname:'/as-needed',
+        state: { currentPatient: this.props.match.params.currentPatient }
+    })
   }
 
   goPrint = () => {
-    this.props.history.push('/morning')
+    this.props.history.push({
+        pathname:'/morning',
+        state: { currentPatient: this.props.match.params.currentPatient }
+    })
   }
 
   render() {
     return (
       <div className="Home">
         <div className="Home-header">
-          <img src={logo} className="Home-logo" alt="logo" /> 
+          <img src={logo} className="Home-logo" alt="logo" />
           <p className= "Home-text">GUIDE ME</p>
         </div>
         <button
@@ -51,7 +69,7 @@ class Home extends Component {
         Log Out
         </button>
         <body className="Home-bar">
-        <p>Patient Name | Prescriptions</p>
+        <p>{this.props.match.params.currentPatient} | Prescriptions</p>
         </body>
           <button
               className="Home-morning"

@@ -10,6 +10,10 @@ class Search extends Component {
     super(props)
   }
 
+  logOut = () => {
+    this.props.history.push('/')
+  }
+
   render() {
     return (
       <div className="Search-container">
@@ -18,9 +22,13 @@ class Search extends Component {
             <img src={logo} className="Search-logo" alt="logo" />
             <p className= "Search-text">GUIDE ME</p>
           </div>
-          <div className= "Search-log-out">
-            <a className="Search-log-out-link"><NavLink to="/">Log Out</NavLink></a>
-          </div>
+          <button
+            className="Search-log-out"
+            type="button"
+            onClick={this.logOut}
+          >
+          Log Out
+          </button>
           <body className="Search-bar">
             <p>Search Patients</p>
           </body>
@@ -30,7 +38,7 @@ class Search extends Component {
             <FilterForm onChange={this.props.handleFilter} firstName={this.props.firstName} lastName={this.props.lastName} birthDate={this.props.birthDate} placeholder="Last Name"/>
             <FilterForm onChange={this.props.handleFilter} firstName={this.props.firstName} lastName={this.props.lastName} birthDate={this.props.birthDate} placeholder="Date of Birth: MMDDYYYY"/>
             <div className ="Add-button">
-              <a className="Add-link"><NavLink to="/home">ADD PATIENT</NavLink></a>
+              <a className="Add-link"><NavLink to="/search">ADD PATIENT</NavLink></a>
             </div>
           </div>
           <ScrollingList filteredPatients={this.props.filteredPatients} />
