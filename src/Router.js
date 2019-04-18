@@ -17,11 +17,11 @@ class Router extends Component {
             <Route exact path="/" render={(props) => <Login {...props} /> } />
             <Route path="/search" component={VisiblePatients}/>
             <Route path="/home/:currentPatient" render={(props) => <Home currentPatient={props.match.params.currentPatient} {...props} /> } />
-            <Route path="/morning" render={(props) => <TimeOfDay label={"Morning"} color={"#F39697"} {...props} /> } />
-            <Route path="/afternoon" render={(props) => <TimeOfDay label={"Afternoon"} color={"#F8B658"} {...props} /> } />
-            <Route path="/evening" render={(props) => <TimeOfDay label={"Evening"} color={"#7E4B68"} {...props} /> } />
-            <Route path="/bedtime" render={(props) => <TimeOfDay label={"Bedtime"} color={"#292965"} {...props} /> } />
-            <Route path="/as-needed" render={(props) => <TimeOfDay label={"As-Needed"} color={"#545454"} {...props} /> } />
+            <Route path="/morning/:currentPatient" render={(props) => <TimeOfDay currentPatient={props.match.params.currentPatient} label={"Morning"} color={"#F39697"} {...props} /> } />
+            <Route path="/afternoon/:currentPatient" render={(props) => <TimeOfDay currentPatient={props.match.params.currentPatient} label={"Afternoon"} color={"#F8B658"} {...props} /> } />
+            <Route path="/evening/:currentPatient" render={(props) => <TimeOfDay currentPatient={props.match.params.currentPatient} label={"Evening"} color={"#7E4B68"} {...props} /> } />
+            <Route path="/bedtime/:currentPatient" render={(props) => <TimeOfDay currentPatient={props.match.params.currentPatient} label={"Bedtime"} color={"#292965"} {...props} /> } />
+            <Route path="/as-needed/:currentPatient" render={(props) => <TimeOfDay currentPatient={props.match.params.currentPatient} label={"As-Needed"} color={"#545454"} {...props} /> } />
         </div>
       </HashRouter>
     );

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
 import logo from './logo.svg';
 import arrow from './arrow.png';
 import './TimeOfDay.css';
@@ -20,6 +19,10 @@ class TimeOfDay extends Component {
             instructions: 'Apply topically'
         }
       ]};
+  }
+
+  goBack = () => {
+    this.props.history.goBack();
   }
 
   logOut = () => {
@@ -72,9 +75,9 @@ class TimeOfDay extends Component {
             <p>{this.props.location.state.currentPatient} | Prescriptions | {this.props.label} </p>
           </div>
           <div className="TimeOfDay-bar-back">
-            <a className="TimeOfDay-back-link"><NavLink to="/home">
-            <img src={arrow} className="TimeOfDay-arrow" alt="arrow" />
-            </NavLink></a>
+            <button className="TimeOfDay-back-button" type ="button" onClick={this.goBack}>
+              <img src={arrow} className="TimeOfDay-arrow" alt="arrow" />
+            </button>
           </div>
         </div>
         <div className = "TimeOfDay-body" style={{backgroundColor: this.props.color}}>

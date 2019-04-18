@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
 import logo from './logo.svg';
 import './Home.css';
 
@@ -14,42 +13,42 @@ class Home extends Component {
 
   goMorning = () => {
     this.props.history.push({
-        pathname:'/morning',
+        pathname:'/morning/' + this.props.match.params.currentPatient,
         state: { currentPatient: this.props.match.params.currentPatient }
     })
   }
 
   goAfternoon = () => {
     this.props.history.push({
-        pathname:'/afternoon',
+        pathname:'/afternoon/' + this.props.match.params.currentPatient,
         state: { currentPatient: this.props.match.params.currentPatient }
     })
   }
 
   goEvening = () => {
     this.props.history.push({
-        pathname:'/evening',
+        pathname:'/evening/' + this.props.match.params.currentPatient,
         state: { currentPatient: this.props.match.params.currentPatient }
     })
   }
 
   goBedtime = () => {
     this.props.history.push({
-        pathname:'/bedtime',
+        pathname:'/bedtime/' + this.props.match.params.currentPatient,
         state: { currentPatient: this.props.match.params.currentPatient }
     })
   }
 
   goAsNeeded = () => {
     this.props.history.push({
-        pathname:'/as-needed',
+        pathname:'/as-needed/' + this.props.match.params.currentPatient,
         state: { currentPatient: this.props.match.params.currentPatient }
     })
   }
 
   goPrint = () => {
     this.props.history.push({
-        pathname:'/morning',
+        pathname:'/morning/' + this.props.match.params.currentPatient,
         state: { currentPatient: this.props.match.params.currentPatient }
     })
   }
