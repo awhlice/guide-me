@@ -49,7 +49,7 @@ class Home extends Component {
 
   goPrint = () => {
     this.props.history.push({
-        pathname:'/morning',
+        pathname:'/print',
         state: { currentPatient: this.props.match.params.currentPatient }
     })
   }

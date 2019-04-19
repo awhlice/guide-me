@@ -8,6 +8,7 @@ import Search from "./Search";
 import Home from "./Home";
 import VisiblePatients from "./VisiblePatients";
 import TimeOfDay from "./TimeOfDay";
+import PrintPage from "./PrintPage";
 
 class Router extends Component {
   render() {
@@ -22,6 +23,7 @@ class Router extends Component {
             <Route path="/evening" render={(props) => <TimeOfDay label={"Evening"} color={"#7E4B68"} {...props} /> } />
             <Route path="/bedtime" render={(props) => <TimeOfDay label={"Bedtime"} color={"#292965"} {...props} /> } />
             <Route path="/as-needed" render={(props) => <TimeOfDay label={"As-Needed"} color={"#545454"} {...props} /> } />
+            <Route path="/print" render={(props) => <PrintPage {...props} /> } />
         </div>
       </HashRouter>
     );

@@ -72,7 +72,7 @@ class TimeOfDay extends Component {
             <p>{this.props.location.state.currentPatient} | Prescriptions | {this.props.label} </p>
           </div>
           <div className="TimeOfDay-bar-back">
-            <a className="TimeOfDay-back-link"><NavLink to="/home">
+            <a className="TimeOfDay-back-link"><NavLink to={`home/${this.props.location.state.currentPatient}`}>
             <img src={arrow} className="TimeOfDay-arrow" alt="arrow" />
             </NavLink></a>
           </div>
