@@ -16,7 +16,7 @@ class Router extends Component {
       <HashRouter>
         <div>
             <Route exact path="/" render={(props) => <Login {...props} /> } />
-            <Route path="/search" component={VisiblePatients}/>
+            <Route path="/search" render={(props) => <VisiblePatients {...props} /> } />
             <Route path="/home/:currentPatient" render={(props) => <Home currentPatient={props.match.params.currentPatient} {...props} /> } />
             <Route path="/morning/:currentPatient" render={(props) => <TimeOfDay currentPatient={props.match.params.currentPatient} label={"Morning"} color={"#F39697"} {...props} /> } />
             <Route path="/afternoon/:currentPatient" render={(props) => <TimeOfDay currentPatient={props.match.params.currentPatient} label={"Afternoon"} color={"#F8B658"} {...props} /> } />

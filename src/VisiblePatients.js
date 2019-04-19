@@ -16,6 +16,10 @@ class VisiblePatients extends Component {
     this.handleFilter = this.handleFilter.bind(this);
   }
 
+  logOut = () => {
+    this.props.history.push('/')
+  }
+
   componentWillMount() {
     this.setState({
       patients: [{firstName: "Gregory", lastName: "Naratil", dateOfBirth:"07101998"}, {firstName: "Alice", lastName: "Wu", dateOfBirth:"07101998"}, {firstName: "Robert", lastName: "Gerdisch", dateOfBirth:"07101997"}, {firstName: "Evelyn", lastName: "Chan", dateOfBirth:"08101998"}, {firstName: "Xenophon", lastName: "Papademetris", dateOfBirth:"07111998"}, {firstName: "Dave", lastName: "O'Connor", dateOfBirth:"12101998"}],
@@ -46,7 +50,7 @@ class VisiblePatients extends Component {
 
   render() {
     return (
-      <Search handleFilter={this.handleFilter} firstName={this.state.firstName} lastName={this.state.lastName} birthDate={this.state.birthDate} filteredPatients={this.state.filteredPatients} />
+      <Search handleFilter={this.handleFilter} firstName={this.state.firstName} lastName={this.state.lastName} birthDate={this.state.birthDate} filteredPatients={this.state.filteredPatients} logOut={this.logOut}/>
     )
   }
 }
