@@ -10,10 +10,6 @@ class Search extends Component {
     super(props)
   }
 
-  logOut = () => {
-    this.props.history.push('/')
-  }
-
   render() {
     return (
       <div className="Search-container">
@@ -25,7 +21,7 @@ class Search extends Component {
           <button
             className="Search-log-out"
             type="button"
-            onClick={this.logOut}
+            onClick={this.props.logOut}
           >
           Log Out
           </button>

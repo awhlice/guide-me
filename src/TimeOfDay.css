@@ -108,11 +108,12 @@
 
 .TimeOfDay button:hover {
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
 .TimeOfDay-prescription {
   padding: 0.5em 0em 0.5em 0em;
-  float: left; 
+  float: left;
   width: 33.333%;
 }
 
@@ -126,13 +127,13 @@
 
 .TimeOfDay-dosage {
   padding: 0.5em 0em 0.5em 0em;
-  display: inline-block; 
+  display: inline-block;
   width: 33.333%;
 }
 
 .TimeOfDay-instruction {
   padding: 0.5em 0em 0.5em 0em;
-  float: right; 
+  float: right;
   width: 33.333%;
 }
 
@@ -166,4 +167,3 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
