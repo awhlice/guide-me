@@ -58,16 +58,13 @@
   float: right;
 }
 
-.TimeOfDay-arrow {
-  height: calc(30px + 2vmin);
+.TimeOfDay-back-button {
+  background-color: #CFCFCF;
+  border: none;
 }
 
-.TimeOfDay-back-link {
-  text-align: center;
-  text-decoration: none;
-  font-size: calc(10px + 2vmin);
-  font-weight: bold;
-  color: white;
+.TimeOfDay-arrow {
+  height: calc(30px + 2vmin);
 }
 
 .TimeOfDay-edit {
